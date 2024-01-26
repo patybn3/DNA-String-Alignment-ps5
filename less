@@ -1,0 +1,80 @@
+--------------------------------------------------------------------------------
+Command:            ./EDistance
+Massif arguments:   (none)
+ms_print arguments: massif.out.184057 massif.txt
+--------------------------------------------------------------------------------
+
+
+    KB
+76.53^                                                                       #
+     |                                                                     ::#
+     |                                                                  :::::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+     |                                                                  :  ::#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   2.610
+
+Number of snapshots: 14
+ Detailed snapshots: [7 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,533,527           72,712           72,704             8            0
+  2      2,649,379           76,816           76,800            16            0
+  3      2,658,245           77,224           77,196            28            0
+  4      2,693,290           78,256           78,220            36            0
+  5      2,708,172           78,296           78,251            45            0
+  6      2,710,072           78,368           78,312            56            0
+  7      2,710,846           78,368           78,312            56            0
+99.93% (78,312B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->92.77% (72,704B) 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+| ->92.77% (72,704B) 0x400647D: call_init.part.0 (dl-init.c:70)
+|   ->92.77% (72,704B) 0x4006567: call_init (dl-init.c:33)
+|     ->92.77% (72,704B) 0x4006567: _dl_init (dl-init.c:117)
+|       ->92.77% (72,704B) 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->06.53% (5,120B) 0x4B3ABA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->06.53% (5,120B) 0x4B49CDF: _IO_doallocbuf (genops.c:347)
+|   ->05.23% (4,096B) 0x4B48CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+|   | ->05.23% (4,096B) 0x4B49D95: _IO_default_uflow (genops.c:362)
+|   |   ->05.23% (4,096B) 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |     ->05.23% (4,096B) 0x49909D5: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |       ->05.23% (4,096B) 0x4938166: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|   |         ->05.23% (4,096B) 0x10A60B: main (main.cpp:42)
+|   |           
+|   ->01.31% (1,024B) 0x4B48F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->01.31% (1,024B) 0x4B476D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->01.31% (1,024B) 0x4B476D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->01.31% (1,024B) 0x4B3BFD6: fwrite (iofwrite.c:39)
+|           ->01.31% (1,024B) 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|             ->01.31% (1,024B) 0x49ACEBA: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+|               ->01.31% (1,024B) 0x10A68D: main (main.cpp:51)
+|                 
+->00.62% (488B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8      2,710,846           78,328           78,281            47            0
+  9      2,723,746           78,256           78,220            36            0
+ 10      2,723,909           77,848           77,824            24            0
+ 11      2,735,569            5,136            5,120            16            0
+ 12      2,736,513            1,032            1,024             8            0
+ 13      2,736,547                0                0             0            0
